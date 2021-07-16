@@ -40,7 +40,7 @@ public class MyClassVisitor extends ClassVisitor implements Opcodes {
             mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
             // ldc pushes a one-word constant onto the operand stack.
             // ldc takes a single parameter, which is the value to push.
-            mv.visitLdcInsn("start");  // LoaD Constant
+            mv.visitLdcInsn("start");  // LoaD Constant Instruction
             // 访问方法操作指令
             mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         }
