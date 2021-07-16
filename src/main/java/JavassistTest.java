@@ -13,7 +13,7 @@ public class JavassistTest {
         m.insertBefore("{ System.out.println(\"start\"); }");
         m.insertAfter("{ System.out.println(\"end\"); }");
         Class c = cc.toClass();
-        cc.writeFile("D:\\code\\ShareDemo\\target\\classes");
+        // cc.writeFile("D:\\code\\ShareDemo\\target\\classes");
         Base h = (Base)c.newInstance();
         h.process();
     }
