@@ -8,7 +8,7 @@ import java.io.IOException;
 public class JavassistTest {
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IllegalAccessException, InstantiationException, IOException {
         ClassPool cp = ClassPool.getDefault();
-        CtClass cc = cp.get("Base");
+        CtClass cc = cp.get("Base");  // compile-time
         CtMethod m = cc.getDeclaredMethod("process");
         m.insertBefore("{ System.out.println(\"start\"); }");
         m.insertAfter("{ System.out.println(\"end\"); }");
